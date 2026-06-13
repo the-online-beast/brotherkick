@@ -201,13 +201,14 @@ em     { color: var(--color-gold); font-style: normal; }
   position: fixed;
   top: 0; left: 0; right: 0;
   z-index: 1000;
-  padding: 0.9rem 0;
-  transition: background var(--transition), padding var(--transition), box-shadow var(--transition);
+  transition: var(--transition);
+  background: rgba(13, 13, 13, 0.85); /* Fond semi-opaque */
+  backdrop-filter: blur(8px); /* Effet frosted glass optionnel */
 }
+
 .navbar.scrolled {
-  background: rgba(13,13,13,0.97);
-  padding: 0.5rem 0;
-  box-shadow: 0 2px 24px rgba(0,0,0,0.6);
+  background: rgba(13, 13, 13, 0.95); /* Plus opaque au scroll */
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.6);
 }
 .navbar__inner {
   display: flex;
