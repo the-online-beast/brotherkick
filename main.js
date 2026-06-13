@@ -92,3 +92,69 @@ console.log(
   "%c🥊 Brother Kick Muay Thai — Discipline • Respect • Stronger Together",
   "color: #C9922A; font-size: 14px; font-weight: bold;",
 );
+// ── GALLERY LIGHTBOX ──
+const galleryItems = document.querySelectorAll('.gallery__item');
+const lightbox     = document.getElementById('lightbox');
+const lightboxImg  = document.getElementById('lightboxImg');
+const lightboxClose = document.getElementById('lightboxClose');
+const lightboxPrev = document.getElementById('lightboxPrev');
+const lightboxNext = document.getElementById('lightboxNext');
+
+let currentIndex = 0;
+const images = [];
+
+// Collect all gallery images
+galleryItems.forEach((item, i) => {
+  const img = item.querySelector('img');
+  images.push({ src: img.src, alt: img.alt });
+
+  item.addEventListener('click', () => {
+    currentIndex = i;
+    openLightbox(currentIndex);
+  });
+});
+
+function openLightbox(index) {
+  lightboxImg.src = images[index].src;
+  lightboxImg.alt = images[index].alt;
+  lightbox.classList.add('active');
+  lightbox.setAttribute('aria-hidden', 'false');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeLightbox() {
+  lightbox.classList.remove('active');
+  lightbox.setAttribute('aria-hidden', 'true');
+  document.body.style.overflow = '';
+}
+
+lightboxClose.addEventListener('click', closeLightbox);
+
+lightboxPrev.addEventListener('click', () => {
+  currentIndex = (currentIndex - 1 + images.length) % images.length;
+  openLightbox(currentIndex);
+});
+
+lightboxNext.addEventListener('click', () => {
+  currentIndex = (currentIndex + 1) % images.length;
+  openLightbox(currentIndex);
+});
+
+// Close on backdrop click
+lightbox.addEventListener('click', (e) => {
+  if (e.target === lightbox) closeLightbox();
+});
+
+// Keyboard navigation
+document.addEventListener('keydown', (e) => {
+  if (!lightbox.classList.contains('active')) return;
+  if (e.key === 'Escape')      closeLightbox();
+  if (e.key === 'ArrowLeft')   { currentIndex = (currentIndex - 1 + images.length) % images.length; openLightbox(currentIndex); }
+  if (e.key === 'ArrowRight')  { currentIndex = (currentIndex + 1) % images.length; openLightbox(currentIndex); }
+});
+
+// ── NAVBAR: add new links ──
+// Ajoute dans ton HTML navbar les liens :
+// <a href="#fighters">Fighters</a>
+// <a href="#gallery">Gallery</a>
+
