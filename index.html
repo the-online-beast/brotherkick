@@ -1,625 +1,457 @@
 <!doctype html>
 <html lang="ms">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="Brother Kick Muay Thai Gym - Subang Bestari, Shah Alam. Latihan Muay Thai untuk semua peringkat."
-    />
-    <title>Brother Kick Muay Thai Gym</title>
-    <link rel="stylesheet" href="style.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans:wght@400;600;700&display=swap"
-      rel="stylesheet"
-    />
-  </head>
-  <body>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="Brother Kick Muay Thai Gym — Subang Bestari, Shah Alam. Latihan Muay Thai untuk semua peringkat. Beginner, Kids, Fighter." />
+  <meta name="keywords"
+    content="muay thai shah alam, muay thai subang, gym muay thai malaysia, brother kick, kickboxing shah alam" />
+  <title>Brother Kick Muay Thai — Shah Alam</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans:wght@400;600;700&display=swap"
+    rel="stylesheet" />
+</head>
+<body>
 
-    <!-- ========== NAVBAR ========== -->
-    <header class="navbar" id="navbar">
-      <div class="container navbar__inner">
-        <a href="#home" class="navbar__logo">
-          <img src="logo.jpg" alt="Brother Kick Muay Thai Logo" />
+  <!-- ===== NAVBAR ===== -->
+  <header class="navbar" id="navbar">
+    <div class="container navbar__inner">
+      <a href="#home" class="navbar__logo">
+        <img src="logo.jpg" alt="Brother Kick Muay Thai" />
+      </a>
+      <button class="navbar__burger" id="burgerBtn" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="navbar__menu" id="navMenu">
+        <a href="#about">About</a>
+        <a href="#classes">Classes</a>
+        <a href="#schedule">Schedule</a>
+        <a href="#fighters">Fighters</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero" id="home">
+    <div class="container hero__content">
+      <div class="hero__logo-wrapper">
+        <img src="logo.jpg" alt="Brother Kick Muay Thai Logo" class="hero__logo" />
+      </div>
+      <h1 class="hero__title">TRAIN HARD.<br />FIGHT SMART.</h1>
+      <p class="hero__subtitle">
+        Muay Thai untuk semua — Beginner hingga Fighter<br />
+        Subang Bestari, Shah Alam
+      </p>
+      <div class="hero__cta">
+        <a href="https://wa.me/601137522230" target="_blank" rel="noopener" class="btn btn--primary">
+          WhatsApp — Daftar Sekarang
         </a>
-        <button class="navbar__burger" id="burgerBtn" aria-label="Menu">
-          <span></span><span></span><span></span>
-        </button>
-        <nav class="navbar__menu" id="navMenu">
-          <a href="#about">Tentang Kami</a>
-          <a href="#classes">Kelas</a>
-          <a href="#schedule">Jadual</a>
-          <a href="#fighters">Fighters</a>
-          <a href="#gallery">Gallery</a>
-          <a href="#pricing">Harga</a>
-          <a href="#contact">Hubungi</a>
-        </nav>
+        <a href="https://www.instagram.com/brotherkickmuaythaigym" target="_blank" rel="noopener" class="btn btn--outline">
+          Instagram
+        </a>
       </div>
-    </header>
+    </div>
+    <div class="hero__scroll">&#8595;</div>
+  </section>
 
-    <!-- ========== HERO ========== -->
-    <section class="hero" id="home">
-      <div class="hero__overlay"></div>
-      <div class="container hero__content">
-        <div class="hero__logo-wrapper">
-          <img src="logo.jpg" alt="Brother Kick Logo" class="hero__logo" />
-        </div>
-        <h1 class="hero__title">TRAIN HARD.<br />FIGHT SMART.</h1>
-        <p class="hero__subtitle">
-          Muay Thai untuk semua — Beginner hingga Fighter<br />Subang Bestari,
-          Shah Alam
+  <!-- ===== ABOUT ===== -->
+  <section class="section section--alt" id="about">
+    <div class="container">
+      <div class="section__header">
+        <span class="section__tag">Tentang Kami</span>
+        <h2 class="section__title">BROTHER KICK <em>MUAY THAI</em></h2>
+        <p class="section__desc">
+          Lebih dari sekadar gym — kami adalah keluarga yang berkongsi semangat
+          seni bela diri terbaik dari Thailand.
         </p>
-        <div class="hero__cta">
-          <a href="https://wa.me/601137522230" target="_blank" class="btn btn--primary">
-            📲 Daftar Sekarang
+      </div>
+      <div class="about__grid">
+        <div class="about__text">
+          <p>
+            Diasaskan oleh <strong>Khru Kamal</strong>, Brother Kick Muay Thai lahir
+            daripada cinta mendalam terhadap seni bela diri Thailand. Berlokasi di
+            <strong>Subang Bestari, Shah Alam</strong>, kami melatih dari peringkat
+            pemula hingga fighter profesional.
+          </p>
+          <p>
+            Dengan pengalaman bertahun-tahun dan kaedah latihan autentik Thailand,
+            kami membentuk pejuang yang bukan sahaja kuat dari segi fizikal, malah
+            kuat dari segi mental dan disiplin.
+          </p>
+          <p>
+            Fighter kami telah bertanding di pentas antarabangsa termasuk
+            <strong>ONE Lumpini</strong> — membuktikan standard latihan kami berada
+            di tahap tertinggi.
+          </p>
+          <div class="about__values">
+            <div class="value__item">
+              <span class="value__icon">&#127981;</span>
+              <span>Disiplin</span>
+            </div>
+            <div class="value__item">
+              <span class="value__icon">&#127869;</span>
+              <span>Tradisi</span>
+            </div>
+            <div class="value__item">
+              <span class="value__icon">&#128170;</span>
+              <span>Kekuatan</span>
+            </div>
+            <div class="value__item">
+              <span class="value__icon">&#129309;</span>
+              <span>Komuniti</span>
+            </div>
+          </div>
+        </div>
+        <div class="about__photo-col">
+          <div class="about__group-photo">
+            <img src="BK_group_1.jpg" alt="Brother Kick Muay Thai team Shah Alam" loading="lazy" />
+          </div>
+          <p class="about__caption">Thai Tradition &times; Malaysian Heart</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CLASSES ===== -->
+  <section class="section" id="classes">
+    <div class="container">
+      <div class="section__header">
+        <span class="section__tag">Program Latihan</span>
+        <h2 class="section__title">PILIH <em>KELAS ANDA</em></h2>
+        <p class="section__desc">
+          Program tersusun untuk setiap peringkat — dari langkah pertama hingga ring profesional.
+        </p>
+      </div>
+      <div class="classes__grid">
+        <div class="class__card class__card--featured">
+          <span class="class__icon">&#127953;</span>
+          <h3>Muay Thai Asas</h3>
+          <p>Teknik asas, stance, pukulan, tendangan dan pertahanan. Sesuai untuk semua peringkat.</p>
+          <span class="badge">Semua Peringkat</span>
+        </div>
+        <div class="class__card">
+          <span class="class__icon">&#127979;</span>
+          <h3>Advanced / Sparring</h3>
+          <p>Latihan intensif, sparring terkawal dan persediaan untuk pertandingan.</p>
+          <span class="badge">Intermediate — Advanced</span>
+        </div>
+        <div class="class__card">
+          <span class="class__icon">&#128081;</span>
+          <h3>Kids Muay Thai</h3>
+          <p>Latihan selamat dan menyeronokkan untuk kanak-kanak. Membina disiplin sejak awal.</p>
+          <span class="badge">Bawah 17 Tahun</span>
+        </div>
+        <div class="class__card">
+          <span class="class__icon">&#128170;</span>
+          <h3>Fitness Muay Thai</h3>
+          <p>Latihan berteraskan kecergasan dan pembakaran kalori. Tanpa tekanan pertandingan.</p>
+          <span class="badge">Fitness Focus</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SCHEDULE ===== -->
+  <section class="section section--alt" id="schedule">
+    <div class="container">
+      <div class="section__header">
+        <span class="section__tag">Jadual Kelas</span>
+        <h2 class="section__title">WAKTU <em>LATIHAN</em></h2>
+        <p class="section__desc">
+          Semak jadual terkini di Instagram atau hubungi kami — waktu boleh berubah mengikut festif.
+        </p>
+      </div>
+      <div class="schedule__wrapper">
+        <div class="schedule__card">
+          <div class="schedule__day">
+            <span class="schedule__label">Isnin — Jumaat</span>
+            <span class="schedule__time">7:00 PM — 9:30 PM</span>
+          </div>
+          <div class="schedule__day">
+            <span class="schedule__label">Sabtu</span>
+            <span class="schedule__time">9:00 AM — 12:00 PM</span>
+          </div>
+          <div class="schedule__day">
+            <span class="schedule__label">Ahad</span>
+            <span class="schedule__time--closed">Rehat / On Request</span>
+          </div>
+        </div>
+        <div class="schedule__note">
+          <p>Jadual boleh berubah. Semak selalu untuk update terkini.</p>
+          <a href="https://www.instagram.com/brotherkickmuaythaigym"
+            target="_blank" rel="noopener" class="btn btn--outline">
+            Semak di Instagram
           </a>
-          <a href="https://www.instagram.com/brotherkickmuaythaigym" target="_blank" class="btn btn--outline">
-            📸 Instagram
-          </a>
         </div>
       </div>
-      <div class="hero__scroll"><span>↓</span></div>
-    </section>
+    </div>
+  </section>
 
-    <!-- ========== ABOUT ========== -->
-    <section class="section about" id="about">
-      <div class="container">
-        <div class="section__header">
-          <span class="section__tag">Tentang Kami / About Us</span>
-          <h2 class="section__title">STRONGER TOGETHER</h2>
-        </div>
-        <div class="about__grid">
-          <div class="about__text">
-            <p>
-              <strong>Brother Kick Muay Thai</strong> adalah gym muay thai yang
-              berdedikasi untuk membentuk pejuang sejati — bukan sahaja di dalam
-              gelanggang, tetapi juga dalam kehidupan seharian.
-            </p>
-            <p>
-              Kami percaya dalam nilai
-              <em>Disiplin, Hormat, dan Semangat Berpasukan</em>. Di sini, anda
-              bukan sekadar ahli gym — anda adalah sebahagian daripada keluarga kami.
-            </p>
-            <p>
-              <em>We build more than fighters — we build character. All levels welcome.</em>
-            </p>
-            <div class="about__values">
-              <div class="value__item">
-                <span class="value__icon">🥊</span>
-                <span>Disiplin</span>
-              </div>
-              <div class="value__item">
-                <span class="value__icon">🙏</span>
-                <span>Hormat</span>
-              </div>
-              <div class="value__item">
-                <span class="value__icon">💪</span>
-                <span>Kekuatan</span>
-              </div>
-              <div class="value__item">
-                <span class="value__icon">🤝</span>
-                <span>Komuniti</span>
-              </div>
-            </div>
-          </div>
-          <!-- Photo groupe dans about -->
-          <div class="about__flags">
-            <div class="about__group-photo">
-              <img 
-                src="BK_group_1.jpg" 
-                alt="Brother Kick Muay Thai team Shah Alam" 
-              />
-            </div>
-            <p class="flags__caption">Thai Tradition × Malaysian Heart</p>
-          </div>
-        </div>
+  <!-- ===== FIGHTERS ===== -->
+  <section class="section" id="fighters">
+    <div class="container">
+      <div class="section__header">
+        <span class="section__tag">Our Fighters</span>
+        <h2 class="section__title">PEJUANG <em>BROTHER KICK</em></h2>
+        <p class="section__desc">
+          Dilatih di sini. Bertanding di ring. Mewakili Brother Kick Muay Thai
+          di peringkat antarabangsa.
+        </p>
       </div>
-    </section>
+      <div class="fighters__grid">
 
-    <!-- ========== CLASSES ========== -->
-    <section class="section classes" id="classes">
-      <div class="container">
-        <div class="section__header">
-          <span class="section__tag">Program Latihan</span>
-          <h2 class="section__title">KELAS KAMI</h2>
-        </div>
-        <div class="classes__grid">
-          <div class="class__card">
-            <div class="class__icon">🥊</div>
-            <h3>Beginner / Asas</h3>
-            <p>
-              Sesuai untuk yang baru bermula. Belajar teknik asas, stance, dan
-              footwork dengan bimbingan coach berpengalaman.
-            </p>
-            <span class="class__badge">All Welcome</span>
-          </div>
-          <div class="class__card class__card--featured">
-            <div class="class__icon">⚔️</div>
-            <h3>Advanced / Fighter</h3>
-            <p>
-              Untuk atlet yang ingin bertanding. Latihan intensif — sparring,
-              conditioning, dan teknik pertarungan lanjutan.
-            </p>
-            <span class="class__badge class__badge--gold">Fighter Track</span>
-          </div>
-          <div class="class__card">
-            <div class="class__icon">👦</div>
-            <h3>Kelas Kanak-Kanak</h3>
-            <p>
-              Program khas untuk bawah 17 tahun. Membina keyakinan diri,
-              disiplin dan kecergasan sejak muda.
-            </p>
-            <span class="class__badge">Bawah 17 Tahun</span>
-          </div>
-          <div class="class__card">
-            <div class="class__icon">🔥</div>
-            <h3>Fitness Muay Thai</h3>
-            <p>
-              Latihan Muay Thai untuk kecergasan dan penurunan berat badan.
-              Tanpa tekanan pertandingan.
-            </p>
-            <span class="class__badge">Fitness Focus</span>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ========== SCHEDULE ========== -->
-    <section class="section schedule" id="schedule">
-      <div class="container">
-        <div class="section__header">
-          <span class="section__tag">Waktu Latihan</span>
-          <h2 class="section__title">JADUAL KELAS</h2>
-        </div>
-        <div class="schedule__wrapper">
-          <div class="schedule__card">
-            <div class="schedule__day">
-              <span class="schedule__label">📅 Isnin – Jumaat</span>
-              <span class="schedule__time">9:30 PM – 11:00 PM</span>
-            </div>
-            <div class="schedule__day">
-              <span class="schedule__label">📅 Sabtu & Ahad</span>
-              <span class="schedule__time schedule__time--closed">❌ Ditutup / Closed</span>
+        <!-- Fighter 1 — Iwan -->
+        <div class="fighter__card fighter__card--featured" style="position:relative;">
+          <div class="fighter__card-badge">ONE LUMPINI FIGHTER</div>
+          <div class="fighter__img-wrapper">
+            <img src="Iwan_main.jpg" alt="Iwan Kick — Brother Kick Muay Thai ONE Lumpini" 
+                 class="fighter__img" loading="lazy" />
+            <div class="fighter__overlay">
+              <span class="fighter__record">Record : 15W — 4L</span>
             </div>
           </div>
-          <div class="schedule__note">
-            <p>⚡ Walk-in dialu-alukan! Hubungi kami untuk pengesahan slot.</p>
-            <a href="https://wa.me/601137522230" target="_blank" class="btn btn--primary">
-              📲 Check Jadual Terkini
+          <div class="fighter__info">
+            <h3>Iwan Syahmi</h3>
+            <span class="fighter__nickname">"Iwan Kick"</span>
+            <span class="fighter__division">Super Lightweight — 70 kg</span>
+            <div class="fighter__event">
+              <div class="fighter__event-row">
+                <span class="fighter__event-label">Event</span>
+                <span class="fighter__event-val">ONE Lumpini 143</span>
+              </div>
+              <div class="fighter__event-row">
+                <span class="fighter__event-label">Date</span>
+                <span class="fighter__event-val">2024</span>
+              </div>
+              <div class="fighter__event-row">
+                <span class="fighter__event-label">Result</span>
+                <span class="fighter__event-val" style="color:var(--color-gold);font-weight:700;">WIN</span>
+              </div>
+            </div>
+            <div class="fighter__tags">
+              <span class="badge">ONE Championship</span>
+              <span class="badge">Lumpini Stadium</span>
+            </div>
+            <a href="https://www.instagram.com/brotherkickmuaythaigym"
+               target="_blank" rel="noopener" class="btn btn--outline" style="width:100%;margin-top:0.5rem;">
+              Instagram
             </a>
           </div>
         </div>
+
+        <!-- Galerie photos Iwan -->
+        <div class="fighter__card fighter__card--gallery">
+          <div class="fighter__gallery-grid">
+            <div class="fighter__gallery-item">
+              <img src="Iwan_one_faceoff.jpg" alt="Iwan Kick face off ONE Lumpini 143" loading="lazy" />
+              <span class="fighter__gallery-caption">Face Off</span>
+            </div>
+            <div class="fighter__gallery-item">
+              <img src="Iwan_one_knee.jpg" alt="Iwan Kick knee strike ONE Lumpini" loading="lazy" />
+              <span class="fighter__gallery-caption">Knee Strike</span>
+            </div>
+            <div class="fighter__gallery-item">
+              <img src="Iwan_one_highkick.jpg" alt="Iwan Kick high kick ONE Lumpini 143" loading="lazy" />
+              <span class="fighter__gallery-caption">High Kick</span>
+            </div>
+            <div class="fighter__gallery-item fighter__gallery-item--win">
+              <img src="Iwan_one_win.jpg" alt="Iwan Kick victoire ONE Lumpini 143" loading="lazy" />
+              <span class="fighter__gallery-caption">Victory</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Placeholder -->
+        <div class="fighter__card fighter__card--soon">
+          <div class="fighter__soon-content">
+            <span class="fighter__soon-icon">&#128081;</span>
+            <h3>Fighter Seterusnya</h3>
+            <p>Sedang dalam persediaan untuk pertandingan akan datang.</p>
+          </div>
+        </div>
+
+        <!-- Join CTA -->
+        <div class="fighter__card fighter__card--join">
+          <div class="fighter__join-content">
+            <span class="fighter__join-icon">&#127940;</span>
+            <h3>Jadilah Sebahagian</h3>
+            <p>Latih bersama kami dan capai potensi terbaik anda.</p>
+            <a href="https://wa.me/601137522230" target="_blank" rel="noopener" class="btn btn--primary">
+              Hubungi Kami
+            </a>
+          </div>
+        </div>
+
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- ========== FIGHTERS ========== -->
-    <section class="section fighters" id="fighters">
-      <div class="container">
-        <div class="section__header">
-          <span class="section__tag">Our Fighters</span>
-          <h2 class="section__title">PEJUANG <em>BROTHER KICK</em></h2>
-          <p class="section__desc">
-            Dilatih di sini. Bertanding di ring. Mewakili Brother Kick Muay Thai di peringkat antarabangsa.
-          </p>
-        </div>
-
-        <div class="fighters__grid">
-
-          <!-- IWAN KICK — FEATURED -->
-          <div class="fighter__card fighter__card--featured">
-            <div class="fighter__card-badge">⭐ FEATURED FIGHTER</div>
-            <div class="fighter__img-wrapper">
-              <img
-                src="Iwan_one_flex_long.jpg"
-                alt="Muhammad Ridzuan Iwan Kick ONE Lumpini 143 Brother Kick Muay Thai Shah Alam"
-                class="fighter__img"
-              />
-              <div class="fighter__overlay">
-                <span class="fighter__record">🏆 ONE LUMPINI 143</span>
-              </div>
-            </div>
-            <div class="fighter__info">
-              <h3>MUHAMMAD RIDZUAN</h3>
-              <p class="fighter__nickname">"IWAN KICK"</p>
-              <p class="fighter__division">⚖️ Atomweight · ONE Lumpini</p>
-              <div class="fighter__event">
-                <div class="fighter__event-row">
-                  <span class="fighter__event-label">EVENT</span>
-                  <span class="fighter__event-val">ONE Lumpini 143</span>
-                </div>
-                <div class="fighter__event-row">
-                  <span class="fighter__event-label">DATE</span>
-                  <span class="fighter__event-val">Fri, Feb 20 · 6:30–11:30PM</span>
-                </div>
-                <div class="fighter__event-row">
-                  <span class="fighter__event-label">BOUT 1</span>
-                  <span class="fighter__event-val">vs Riku ITO 🇯🇵</span>
-                </div>
-              </div>
-              <div class="fighter__tags">
-                <span class="class__badge class__badge--gold">ONE Lumpini</span>
-                <span class="class__badge">Kompetitif</span>
-                <span class="class__badge">Atomweight</span>
-              </div>
-              <a
-                href="https://www.instagram.com/Wannkick_"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="btn btn--outline fighter__insta-btn"
-              >
-                📸 @Wannkick_
-              </a>
-            </div>
-          </div>
-
-          <!-- GALERIE PHOTOS IWAN -->
-          <div class="fighter__card fighter__card--gallery">
-            <div class="fighter__gallery-grid">
-              <div class="fighter__gallery-item">
-                <img
-                  src="Iwan_one_faceoff.jpg"
-                  alt="Iwan Kick face off ONE Lumpini 143 Muay Thai"
-                  loading="lazy"
-                />
-                <span class="fighter__gallery-caption">Face Off</span>
-              </div>
-              <div class="fighter__gallery-item">
-                <img
-                  src="Iwan_one_knee.jpg"
-                  alt="Iwan Kick knee strike Muay Thai ONE Lumpini"
-                  loading="lazy"
-                />
-                <span class="fighter__gallery-caption">Knee Strike</span>
-              </div>
-              <div class="fighter__gallery-item">
-                <img
-                  src="Iwan_one_highkick.jpg"
-                  alt="Iwan Kick high kick Muay Thai ONE Lumpini 143"
-                  loading="lazy"
-                />
-                <span class="fighter__gallery-caption">High Kick</span>
-              </div>
-              <div class="fighter__gallery-item fighter__gallery-item--win">
-                <img
-                  src="Iwan_one_win.jpg"
-                  alt="Iwan Kick victoire ONE Lumpini 143 Brother Kick Muay Thai"
-                  loading="lazy"
-                />
-                <span class="fighter__gallery-caption">🏆 Victory</span>
-              </div>
-            </div>
-          </div>
-
-          <!-- PLACEHOLDER 2 -->
-          <div class="fighter__card fighter__card--soon">
-            <div class="fighter__soon-content">
-              <span class="fighter__soon-icon">🥊</span>
-              <h3>FIGHTER #2</h3>
-              <p>Coming Soon</p>
-              <span class="class__badge">Brother Kick</span>
-            </div>
-          </div>
-
-          <!-- CTA JOIN -->
-          <div class="fighter__card fighter__card--join">
-            <div class="fighter__join-content">
-              <span class="fighter__join-icon">🏆</span>
-              <h3>AWAK SETERUSNYA?</h3>
-              <p>Sertai program fighter kami dan bertanding di ring</p>
-              <a
-                href="https://www.instagram.com/brotherkickmuaythaigym"
-                target="_blank"
-                class="btn btn--outline"
-              >
-                DM KAMI
-              </a>
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- ========== GALLERY ========== -->
-    <section class="section section--dark gallery" id="gallery">
-      <div class="container">
-        <div class="section__header">
-          <span class="section__tag">Gallery</span>
-          <h2 class="section__title">LATIHAN & <em>KEHIDUPAN</em></h2>
-          <p class="section__desc">
-            Momen di dalam gym — sweat, grind & brotherhood.
-          </p>
-        </div>
-
-        <div class="gallery__grid">
-          <div class="gallery__item gallery__item--large">
-            <img
-              src="BK_group_1.jpg"
-              alt="Brother Kick Muay Thai team Shah Alam group photo"
-              loading="lazy"
-            />
-            <div class="gallery__caption">Brother Kick Family</div>
-          </div>
-          <div class="gallery__item">
-            <img
-              src="BK_group_2.jpg"
-              alt="Brother Kick Muay Thai gym team Subang Bestari"
-              loading="lazy"
-            />
-            <div class="gallery__caption">Team Brother Kick</div>
-          </div>
-          <div class="gallery__item">
-            <img
-              src="Iwan_one_faceoff.jpg"
-              alt="Iwan Kick face off ONE Lumpini 143 Muay Thai Malaysia"
-              loading="lazy"
-            />
-            <div class="gallery__caption">Face Off — ONE Lumpini</div>
-          </div>
-          <div class="gallery__item">
-            <img
-              src="Iwan_one_knee.jpg"
-              alt="Iwan Kick knee strike ONE Lumpini Muay Thai"
-              loading="lazy"
-            />
-            <div class="gallery__caption">Knee Strike</div>
-          </div>
-          <div class="gallery__item">
-            <img
-              src="Iwan_one_highkick.jpg"
-              alt="Iwan Kick high kick ONE Lumpini 143"
-              loading="lazy"
-            />
-            <div class="gallery__caption">High Kick</div>
-          </div>
-          <div class="gallery__item gallery__item--large">
-            <img
-              src="Iwan_one_win.jpg"
-              alt="Iwan Kick victory ONE Lumpini 143 Brother Kick Muay Thai Shah Alam"
-              loading="lazy"
-            />
-            <div class="gallery__caption">🏆 Victory — ONE Lumpini 143</div>
-          </div>
-        </div>
-
-        <!-- Lightbox overlay -->
-        <div class="lightbox" id="lightbox" aria-hidden="true">
-          <button class="lightbox__close" id="lightboxClose" aria-label="Fermer">✕</button>
-          <button class="lightbox__nav lightbox__nav--prev" id="lightboxPrev">&#8249;</button>
-          <img src="" alt="" class="lightbox__img" id="lightboxImg" />
-          <button class="lightbox__nav lightbox__nav--next" id="lightboxNext">&#8250;</button>
-        </div>
-
-        <div class="gallery__cta">
-          <a
-            href="https://www.instagram.com/brotherkickmuaythaigym"
-            target="_blank"
-            class="btn btn--outline"
-          >
-            📸 LEBIH BANYAK DI INSTAGRAM
-          </a>
-        </div>
-      </div>
-    </section>
-
-    <!-- ========== MUAY THAI HISTORY (SEO) ========== -->
-    <section class="section section--dark seo-history" id="muaythai-history">
-      <div class="container">
-        <div class="section__header">
-          <span class="section__tag">Heritage</span>
-          <h2 class="section__title">SEJARAH <em>MUAY THAI</em></h2>
-          <p class="section__desc">
-            Seni bela diri yang lahir dari tanah Thailand — kini hidup di Shah Alam.
-          </p>
-        </div>
-        <div class="history__grid">
-          <article class="history__card">
-            <div class="history__icon">⚔️</div>
-            <h3>Asal Usul Muay Thai</h3>
-            <p>
-              Muay Thai, dikenali sebagai <strong>"Seni Lapan Anggota"</strong>
-              (<em>the Art of Eight Limbs</em>), adalah seni bela diri tradisional
-              Thailand yang menggunakan penumbuk, tendangan, siku dan lutut.
-              Bermula dari abad ke-13 sebagai latihan tempur tentera Kerajaan
-              Sukhothai, ia berkembang menjadi sukan kebangsaan Thailand.
-            </p>
-          </article>
-          <article class="history__card">
-            <div class="history__icon">🏆</div>
-            <h3>Muay Thai Moden</h3>
-            <p>
-              Pada abad ke-20, Muay Thai menjadi sukan bertanding formal dengan
-              peraturan berseragam. <strong>Rajadamnern Stadium</strong> (1945)
-              dan <strong>Lumpinee Stadium</strong> (1956) di Bangkok menjadi
-              kuil sukan ini. Pertubuhan <em>World Muay Thai Council (WMC)</em>
-              dan <em>IFMA</em> kini mengawal selia Muay Thai di peringkat antarabangsa.
-            </p>
-          </article>
-          <article class="history__card">
-            <div class="history__icon">🌏</div>
-            <h3>Muay Thai di Malaysia</h3>
-            <p>
-              Malaysia adalah antara negara Asia Tenggara yang paling aktif dalam
-              perkembangan Muay Thai. Persatuan <strong>Muay Thai Malaysia (MTM)</strong>
-              menganjurkan pertandingan kebangsaan setiap tahun.
-              Kawasan <em>Shah Alam, Subang, Petaling Jaya</em> dan Klang Valley
-              menjadi hab utama gym Muay Thai di negara ini.
-            </p>
-          </article>
-          <article class="history__card">
-            <div class="history__icon">🥊</div>
-            <h3>Teknik Asas Muay Thai</h3>
-            <p>
-              Lapan senjata Muay Thai: <strong>Jab, Cross, Hook, Uppercut</strong>
-              (penumbuk) · <strong>Teep, Roundhouse, Knee Kick</strong> (tendangan & lutut) ·
-              <strong>Elbow strike</strong> (siku). Latihan meliputi
-              <em>shadowboxing, pad work, bagwork, clinch work</em> dan
-              <em>sparring</em> — membina kekuatan, kelajuan, dan mental fighter.
-            </p>
-          </article>
-          <article class="history__card">
-            <div class="history__icon">🧘</div>
-            <h3>Manfaat Latihan Muay Thai</h3>
-            <p>
-              Latihan Muay Thai meningkatkan <strong>kardiovaskular, koordinasi,
-              disiplin diri</strong> dan keyakinan. Sesuai untuk semua peringkat umur —
-              dari kanak-kanak 5 tahun hingga dewasa 50 tahun.
-              <em>Brother Kick Muay Thai</em> di Shah Alam menawarkan kelas
-              untuk beginner, intermediate, advanced dan program fighter.
-            </p>
-          </article>
-          <article class="history__card">
-            <div class="history__icon">📍</div>
-            <h3>Gym Muay Thai Shah Alam</h3>
-            <p>
-              <strong>Brother Kick Muay Thai</strong> terletak di
-              <em>Subang Bestari, Shah Alam, Selangor</em>.
-              Kami melatih atlet dari kawasan Subang, USJ, Petaling Jaya,
-              Klang dan seluruh Selangor. Dengan jurulatih berpengalaman
-              bertauliah dari Thailand, kami memastikan setiap ahli mendapat
-              latihan Muay Thai berkualiti tinggi.
-            </p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- ========== PRICING ========== -->
-    <section class="section pricing" id="pricing">
-      <div class="container">
-        <div class="section__header">
-          <span class="section__tag">Pakej & Harga</span>
-          <h2 class="section__title">INVEST IN YOURSELF</h2>
-          <p class="section__desc">
-            Harga kami kompetitif dan berpatutan. Untuk pakej terkini dan
-            promosi, semak Instagram atau hubungi kami terus!
-          </p>
-        </div>
-        <div class="pricing__cta-grid">
-          <a
-            href="https://www.instagram.com/brotherkickmuaythaigym"
-            target="_blank"
-            class="pricing__cta-card"
-          >
-            <span class="pricing__cta-icon">📸</span>
-            <h3>Semak Harga di Instagram</h3>
-            <p>Promosi terhebat bulan ini & pakej terkini</p>
-            <span class="btn btn--outline">@brotherkickmuaythaigym</span>
-          </a>
-          <a
-            href="https://wa.me/601137522230"
-            target="_blank"
-            class="pricing__cta-card pricing__cta-card--gold"
-          >
-            <span class="pricing__cta-icon">💬</span>
-            <h3>Tanya Khru Kamal</h3>
-            <p>Dapatkan maklumat harga & daftar terus via WhatsApp</p>
-            <span class="btn btn--primary">+60 11-3752 2230</span>
-          </a>
-        </div>
-        <div class="pricing__walkin">
-          <p>🚶 <strong>Walk-In RM35</strong> — Semua peringkat dialu-alukan!</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- ========== CONTACT ========== -->
-    <section class="section contact" id="contact">
-      <div class="container">
-        <div class="section__header">
-          <span class="section__tag">Hubungi Kami</span>
-          <h2 class="section__title">JANGAN TUNGGU LAGI</h2>
-        </div>
-        <div class="contact__grid">
-          <div class="contact__info">
-            <div class="contact__item">
-              <span class="contact__icon">📍</span>
-              <div>
-                <strong>Lokasi / Address</strong>
-                <p>
-                  No 37-1, Jalan Bulan BR U5/BR,<br />
-                  Seksyen U5, Bandar Pinggiran Subang,<br />
-                  Shah Alam, Selangor, Malaysia
-                </p>
-                <a
-                  href="https://maps.google.com/?q=No+37-1+Jalan+Bulan+BR+U5/BR+Seksyen+U5+Bandar+Pinggiran+Subang+Shah+Alam"
-                  target="_blank"
-                  class="link--gold"
-                >🗺️ Lihat di Google Maps</a>
-              </div>
-            </div>
-            <div class="contact__item">
-              <span class="contact__icon">📱</span>
-              <div>
-                <strong>WhatsApp — Khru Kamal</strong>
-                <p>
-                  <a href="https://wa.me/601137522230" target="_blank" class="link--gold">
-                    +60 11-3752 2230
-                  </a>
-                </p>
-              </div>
-            </div>
-            <div class="contact__item">
-              <span class="contact__icon">✉️</span>
-              <div>
-                <strong>Email</strong>
-                <p>
-                  <a href="/cdn-cgi/l/email-protection#debcacb1aab6bbacb5b7bdb5adb7b0b9bfb6b7aabfb39eb9b3bfb7b2f0bdb1b3" class="link--gold">
-                    <span class="__cf_email__" data-cfemail="bbd9c9d4cfd3dec9d0d2d8d0c8d2d5dcdad3d2cfdad6fbdcd6dad2d795d8d4d6">[email&#160;protected]</span>
-                  </a>
-                </p>
-              </div>
-            </div>
-            <div class="contact__item">
-              <span class="contact__icon">📸</span>
-              <div>
-                <strong>Instagram</strong>
-                <p>
-                  <a
-                    href="https://www.instagram.com/brotherkickmuaythaigym"
-                    target="_blank"
-                    class="link--gold"
-                  >@brotherkickmuaythaigym</a>
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <div class="contact__map">
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1500!2d101.5483465019614!3d3.177199861631265!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31cc4f310570cfa1%3A0xe60874093af3fbf5!2s43%2C%20Jalan%20Nova%20U5%2FN%2C%20Subang%20Bestari%2C%2040150%20Shah%20Alam%2C%20Selangor!5e0!3m2!1sfr!2smy!4v1780910940579!5m2!1sfr!2smy"
-              width="100%"
-              height="380"
-              style="border: 0; border-radius: 16px; display: block"
-              allowfullscreen=""
-              loading="lazy"
-              referrerpolicy="no-referrer-when-downgrade"
-              title="Brother Kick Muay Thai Location"
-            ></iframe>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ========== FOOTER ========== -->
-    <footer class="footer">
-      <div class="container footer__inner">
-        <img src="logo.jpg" alt="Brother Kick Logo" class="footer__logo" />
-        <div class="footer__links">
-          <a href="https://www.instagram.com/brotherkickmuaythaigym" target="_blank">Instagram</a>
-          <a href="https://wa.me/601137522230" target="_blank">WhatsApp</a>
-          <a href="/cdn-cgi/l/email-protection#1476667b607c71667f7d777f677d7a73757c7d607579547379757d783a777b79">Email</a>
-        </div>
-        <p class="footer__copy">
-          © 2025 Brother Kick Muay Thai Gym — Subang Bestari, Shah Alam<br />
-          <em>Discipline • Respect • Stronger Together</em>
+  <!-- ===== GALLERY ===== -->
+  <section class="section section--alt" id="gallery">
+    <div class="container">
+      <div class="section__header">
+        <span class="section__tag">Gallery</span>
+        <h2 class="section__title">DALAM <em>GYM KAMI</em></h2>
+        <p class="section__desc">
+          Latihan harian, pertandingan, dan momen istimewa Brother Kick Muay Thai.
         </p>
       </div>
-    </footer>
 
-    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="main.js"></script>
-  <script defer src="https://static.cloudflareinsights.com/beacon.min.js/v833ccba57c9e4d2798f2e76cebdd09a11778172276447" integrity="sha512-57MDmcccJXYtNnH+ZiBwzC4jb2rvgVCEokYN+L/nLlmO8rfYT/gIpW2A569iJ/3b+0UEasghjuZH/ma3wIs/EQ==" data-cf-beacon='{"version":"2024.11.0","token":"8607d2a720d14b038279025b2b5a82e5","server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
-</body>
-</html>
+      <div class="gallery__grid">
+        <div class="gallery__item gallery__item--large">
+          <img src="assets/gallery1.jpg" alt="Training session Brother Kick Muay Thai Shah Alam" loading="lazy" />
+          <div class="gallery__caption">Training Session</div>
+        </div>
+        <div class="gallery__item">
+          <img src="assets/gallery2.jpg" alt="Pad work Muay Thai Subang" loading="lazy" />
+          <div class="gallery__caption">Pad Work</div>
+        </div>
+        <div class="gallery__item">
+          <img src="assets/gallery3.jpg" alt="Sparring Muay Thai Shah Alam" loading="lazy" />
+          <div class="gallery__caption">Sparring</div>
+        </div>
+        <div class="gallery__item">
+          <img src="assets/gallery4.jpg" alt="Kids Muay Thai Brother Kick" loading="lazy" />
+          <div class="gallery__caption">Kids Class</div>
+        </div>
+        <div class="gallery__item">
+          <img src="assets/gallery5.jpg" alt="Heavy bag training muay thai" loading="lazy" />
+          <div class="gallery__caption">Bag Work</div>
+        </div>
+        <div class="gallery__item">
+          <img src="assets/gallery6.jpg" alt="Brother Kick team muay thai" loading="lazy" />
+          <div class="gallery__caption">Team</div>
+        </div>
+        <div class="gallery__item">
+          <img src="assets/gallery7.jpg" alt="Fight night muay thai malaysia" loading="lazy" />
+          <div class="gallery__caption">Fight Night</div>
+        </div>
+      </div>
+
+      <!-- Lightbox -->
+      <div class="lightbox" id="lightbox" aria-hidden="true">
+        <button class="lightbox__close" id="lightboxClose" aria-label="Fermer">&#10005;</button>
+        <button class="lightbox__nav lightbox__nav--prev" id="lightboxPrev">&#8249;</button>
+        <img src="" alt="" class="lightbox__img" id="lightboxImg" />
+        <button class="lightbox__nav lightbox__nav--next" id="lightboxNext">&#8250;</button>
+      </div>
+
+      <div class="gallery__cta">
+        <a href="https://www.instagram.com/brotherkickmuaythaigym"
+           target="_blank" rel="noopener" class="btn btn--outline">
+          Lebih Banyak di Instagram
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== HISTORY / SEO ===== -->
+  <section class="section" id="history">
+    <div class="container">
+      <div class="section__header">
+        <span class="section__tag">Mengapa Muay Thai</span>
+        <h2 class="section__title">SENI BELA DIRI <em>TERBAIK</em></h2>
+        <p class="section__desc">
+          Muay Thai bukan sekadar sukan — ia adalah warisan budaya dan sistem pertahanan diri yang lengkap.
+        </p>
+      </div>
+      <div class="history__grid">
+        <div class="history__card">
+          <span class="history__icon">&#127981;</span>
+          <h3>Tradisi Thailand</h3>
+          <p>
+            Digelar "Seni Lapan Anggota", Muay Thai menggunakan tumbukan, siku, lutut dan tendangan.
+            Ia adalah seni bela diri yang paling komprehensif di dunia, bermula lebih 2,000 tahun dahulu.
+          </p>
+        </div>
+        <div class="history__card">
+          <span class="history__icon">&#128170;</span>
+          <h3>Faedah Fizikal</h3>
+          <p>
+            Latihan Muay Thai meningkatkan kekuatan, stamina, koordinasi dan kelenturan badan.
+            Satu sesi boleh membakar sehingga 700 kalori — ideal untuk kecergasan menyeluruh.
+          </p>
+        </div>
+        <div class="history__card">
+          <span class="history__icon">&#129504;</span>
+          <h3>Disiplin Mental</h3>
+          <p>
+            Lebih dari fizikal — Muay Thai membina ketahanan mental, kawalan emosi dan keyakinan diri.
+            Nilai-nilai ini terbawa dalam kehidupan harian setiap pelajar.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PRICING ===== -->
+  <section class="section section--alt" id="pricing">
+    <div class="container">
+      <div class="section__header">
+        <span class="section__tag">Pakej & Harga</span>
+        <h2 class="section__title">INVEST IN <em>YOURSELF</em></h2>
+        <p class="section__desc">
+          Harga kami kompetitif dan berpatutan. Untuk pakej terkini dan promosi,
+          semak Instagram atau hubungi kami terus.
+        </p>
+      </div>
+      <div class="pricing__cta-grid">
+        <a href="https://www.instagram.com/brotherkickmuaythaigym"
+           target="_blank" rel="noopener" class="pricing__cta-card">
+          <span class="pricing__cta-icon">&#128247;</span>
+          <h3>Semak Harga di Instagram</h3>
+          <p>Promosi terkini & pakej bulan ini</p>
+          <span class="btn btn--outline">@brotherkickmuaythaigym</span>
+        </a>
+        <a href="https://wa.me/601137522230"
+           target="_blank" rel="noopener" class="pricing__cta-card pricing__cta-card--gold">
+          <span class="pricing__cta-icon">&#128172;</span>
+          <h3>Tanya Khru Kamal</h3>
+          <p>Maklumat harga & pendaftaran via WhatsApp</p>
+          <span class="btn btn--primary">+60 11-3752 2230</span>
+        </a>
+      </div>
+      <div class="pricing__walkin">
+        <p><strong>Walk-In RM35</strong> &mdash; Semua peringkat dialu-alukan!</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT ===== -->
+  <section class="section" id="contact">
+    <div class="container">
+      <div class="section__header">
+        <span class="section__tag">Hubungi Kami</span>
+        <h2 class="section__title">JUMPA <em>KAMI</em></h2>
+        <p class="section__desc">
+          Soal pertanyaan, pendaftaran atau sekadar ingin tahu lebih lanjut —
+          kami sedia membantu.
+        </p>
+      </div>
+      <div class="contact__grid">
+        <div class="contact__info">
+          <div class="contact__item">
+            <span class="contact__icon">&#128205;</span>
+            <div>
+              <strong>Alamat</strong>
+              <p>No 37-1, Jalan Bulan BR U5/BR, Seksyen U5<br />
+                Bandar Pinggiran Subang, Shah Alam, Malaysia</p>
+            </div>
+          </div>
+          <div class="contact__item">
+            <span class="contact__icon">&#128241;</span>
+            <div>
+              <strong>WhatsApp</strong>
+              <p>
+                <a href="https://wa.me/601137522230" target="_blank" rel="noopener" class="link--gold">
+                  +60 11-3752 2230
+                </a>
+              </p>
+            </div>
+          </div
