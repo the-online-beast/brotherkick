@@ -1,982 +1,423 @@
-/* ============================================
-   BROTHER KICK MUAY THAI — STYLESHEET
-   1. CSS Variables
-   2. Reset & Base
-   3. Typography
-   4. Layout Utilities
-   5. Components (btn, badge, section header)
-   6. Navbar
-   7. Hero
-   8. About
-   9. Classes
-   10. Schedule
-   11. Fighters
-   12. Gallery
-   13. History (SEO)
-   14. Pricing
-   15. Contact
-   16. Footer
-   17. Responsive
-============================================ */
-
-/* ── 1. CSS VARIABLES ── */
-:root {
-  --color-bg:         #0d0d0d;
-  --color-bg-alt:     #141414;
-  --color-bg-card:    #1a1a1a;
-  --color-gold:       #c9922a;
-  --color-gold-light: #f0b840;
-  --color-white:      #ffffff;
-  --color-grey:       #aaaaaa;
-  --color-border:     #2a2a2a;
-
-  --font-title: "Bebas Neue", sans-serif;
-  --font-body:  "Open Sans", sans-serif;
-
-  --fs-hero:     clamp(2.8rem, 8vw, 5.5rem);
-  --fs-title:    clamp(1.8rem, 4vw, 2.8rem);
-  --fs-subtitle: clamp(0.95rem, 2vw, 1.15rem);
-  --fs-body:     1rem;
-  --fs-small:    0.875rem;
-
-  --space-xs: 0.5rem;
-  --space-sm: 1rem;
-  --space-md: 2rem;
-  --space-lg: 3.5rem;
-  --space-xl: 5rem;
-
-  --radius-sm: 4px;
-  --radius-md: 8px;
-  --radius-lg: 14px;
-
-  --transition: 0.3s ease;
-  --max-width:  1100px;
-}
-
-/* ── 2. RESET & BASE ── */
-*, *::before, *::after {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-html { scroll-behavior: smooth; }
-
-body {
-  background-color: var(--color-bg);
-  color: var(--color-white);
-  font-family: var(--font-body);
-  font-size: var(--fs-body);
-  line-height: 1.7;
-  overflow-x: hidden;
-}
-
-img { max-width: 100%; display: block; }
-a   { color: inherit; text-decoration: none; }
-ul  { list-style: none; }
-
-/* ── 3. TYPOGRAPHY ── */
-h1, h2, h3, h4 {
-  font-family: var(--font-title);
-  line-height: 1.1;
-  letter-spacing: 0.03em;
-}
-
-h1 { font-size: var(--fs-hero); }
-h2 { font-size: var(--fs-title); }
-h3 { font-size: 1.4rem; }
-h4 { font-size: 1.1rem; }
-
-p      { color: var(--color-grey); margin-bottom: var(--space-sm); }
-strong { color: var(--color-white); font-weight: 700; }
-em     { color: var(--color-gold); font-style: normal; }
-
-/* ── 4. LAYOUT UTILITIES ── */
-.container {
-  width: 90%;
-  max-width: var(--max-width);
-  margin: 0 auto;
-}
-
-.section        { padding: var(--space-xl) 0; }
-.section--alt   { background-color: var(--color-bg-alt); }
-
-/* ── 5. COMPONENTS ── */
-
-/* -- Buttons -- */
-.btn {
-  display: inline-block;
-  padding: 0.7rem 1.8rem;
-  border-radius: var(--radius-md);
-  font-family: var(--font-title);
-  font-size: 1.05rem;
-  letter-spacing: 0.06em;
-  cursor: pointer;
-  border: 2px solid transparent;
-  text-align: center;
-  transition: transform var(--transition),
-              box-shadow var(--transition),
-              background var(--transition),
-              color var(--transition);
-}
-.btn:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(0,0,0,0.4);
-}
-.btn--primary {
-  background: var(--color-gold);
-  color: var(--color-bg);
-  border-color: var(--color-gold);
-}
-.btn--primary:hover {
-  background: var(--color-gold-light);
-  border-color: var(--color-gold-light);
-}
-.btn--outline {
-  background: transparent;
-  color: var(--color-gold);
-  border-color: var(--color-gold);
-}
-.btn--outline:hover {
-  background: var(--color-gold);
-  color: var(--color-bg);
-}
-
-/* -- Section Header (centré, cohérent partout) -- */
-.section__header {
-  text-align: center;
-  margin-bottom: var(--space-lg);
-}
-.section__tag {
-  display: inline-block;
-  font-family: var(--font-body);
-  font-size: 0.75rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.18em;
-  color: var(--color-gold);
-  border: 1px solid var(--color-gold);
-  padding: 0.2rem 0.8rem;
-  border-radius: var(--radius-sm);
-  margin-bottom: var(--space-xs);
-}
-.section__title {
-  color: var(--color-white);
-  margin-bottom: var(--space-sm);
-}
-.section__desc {
-  max-width: 580px;
-  margin: 0 auto;
-  color: var(--color-grey);
-  font-size: var(--fs-subtitle);
-}
-
-/* -- Badge -- */
-.badge {
-  display: inline-block;
-  padding: 0.2rem 0.7rem;
-  border-radius: 20px;
-  font-size: 0.78rem;
-  font-weight: 700;
-  background: rgba(201,146,42,0.12);
-  color: var(--color-gold);
-  border: 1px solid rgba(201,146,42,0.4);
-}
-.badge--solid {
-  background: var(--color-gold);
-  color: var(--color-bg);
-  border-color: var(--color-gold);
-}
-
-/* -- Gold link -- */
-.link--gold {
-  color: var(--color-gold);
-  font-weight: 600;
-  transition: color var(--transition);
-}
-.link--gold:hover { color: var(--color-gold-light); }
-
-/* ── 6. NAVBAR ── */
-.navbar {
-  position: fixed;
-  top: 0; left: 0; right: 0;
-  z-index: 1000;
-  transition: var(--transition);
-  background: rgba(13, 13, 13, 0.85); /* Fond semi-opaque */
-  backdrop-filter: blur(8px); /* Effet frosted glass optionnel */
-}
-
-.navbar.scrolled {
-  background: rgba(13, 13, 13, 0.95); /* Plus opaque au scroll */
-  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.6);
-}
-.navbar__inner {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-.navbar__logo img {
-  height: 46px;
-  width: auto;
-}
-.navbar__menu {
-  display: flex;
-  gap: 1.6rem;
-  align-items: center;
-}
-.navbar__menu a {
-  font-family: var(--font-body);
-  font-weight: 600;
-  font-size: 0.82rem;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-  color: var(--color-grey);
-  transition: color var(--transition);
-  position: relative;
-}
-.navbar__menu a::after {
-  content: "";
-  position: absolute;
-  bottom: -4px; left: 0;
-  width: 0; height: 2px;
-  background: var(--color-gold);
-  transition: width var(--transition);
-}
-.navbar__menu a:hover          { color: var(--color-gold); }
-.navbar__menu a:hover::after   { width: 100%; }
-.navbar__menu a.active         { color: var(--color-gold); }
-.navbar__menu a.active::after  { width: 100%; }
-
-.navbar__burger {
-  display: none;
-  flex-direction: column;
-  gap: 5px;
-  background: none;
-  border: none;
-  cursor: pointer;
-  padding: 5px;
-}
-.navbar__burger span {
-  display: block;
-  width: 25px; height: 2px;
-  background: var(--color-white);
-  transition: var(--transition);
-}
-.navbar__burger.active span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
-.navbar__burger.active span:nth-child(2) { opacity: 0; }
-.navbar__burger.active span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
-
-/* ── 7. HERO ── */
-.hero {
-  position: relative;
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
-  background: radial-gradient(ellipse at center, #1c0e00 0%, #0d0d0d 65%);
-}
-.hero::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background-image: repeating-linear-gradient(
-    45deg,
-    transparent, transparent 50px,
-    rgba(201,146,42,0.025) 50px,
-    rgba(201,146,42,0.025) 51px
-  );
-  pointer-events: none;
-}
-.hero__content {
-  position: relative;
-  z-index: 1;
-  text-align: center;
-  padding: 120px 0 80px;
-}
-
-/* Logo hero — cercle animé */
-.hero__logo-wrapper {
-  width: clamp(130px, 22vw, 200px);
-  height: clamp(130px, 22vw, 200px);
-  margin: 0 auto var(--space-md);
-  border-radius: 50%;
-  overflow: hidden;
-  border: 3px solid var(--color-gold);
-  box-shadow:
-    0 0 0 6px rgba(201,146,42,0.08),
-    0 0 40px rgba(201,146,42,0.45),
-    0 0 80px rgba(201,146,42,0.18);
-  animation: float 3.5s ease-in-out infinite;
-}
-.hero__logo {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-}
-
-@keyframes float {
-  0%, 100% { transform: translateY(0); }
-  50%       { transform: translateY(-12px); }
-}
-
-.hero__title {
-  color: var(--color-white);
-  margin-bottom: var(--space-sm);
-  text-shadow: 0 0 50px rgba(201,146,42,0.25);
-}
-.hero__subtitle {
-  font-size: var(--fs-subtitle);
-  color: var(--color-grey);
-  margin-bottom: var(--space-lg);
-  line-height: 1.8;
-}
-.hero__cta {
-  display: flex;
-  gap: var(--space-sm);
-  justify-content: center;
-  flex-wrap: wrap;
-}
-.hero__scroll {
-  position: absolute;
-  bottom: 2rem; left: 50%;
-  transform: translateX(-50%);
-  color: var(--color-gold);
-  font-size: 1.3rem;
-  animation: bounce 1.8s ease-in-out infinite;
-  z-index: 1;
-}
-@keyframes bounce {
-  0%, 100% { transform: translateX(-50%) translateY(0); }
-  50%       { transform: translateX(-50%) translateY(8px); }
-}
-
-/* ── 8. ABOUT ── */
-.about__grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: var(--space-xl);
-  align-items: center;
-}
-.about__text p { font-size: 1rem; }
-
-.about__values {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: var(--space-sm);
-  margin-top: var(--space-md);
-}
-.value__item {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 6px;
-  padding: var(--space-sm);
-  background: var(--color-bg-card);
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-md);
-  text-align: center;
-  font-size: 0.78rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.06em;
-  color: var(--color-white);
-  transition: border-color var(--transition);
-}
-.value__item:hover { border-color: var(--color-gold); }
-.value__icon { font-size: 1.4rem; }
-
-.about__photo-col {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: var(--space-sm);
-}
-.about__group-photo {
-  width: 100%;
-  border-radius: var(--radius-lg);
-  overflow: hidden;
-  border: 2px solid rgba(201,146,42,0.5);
-  aspect-ratio: 4/3;
-  box-shadow: 0 0 40px rgba(201,146,42,0.15);
-}
-.about__group-photo img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: transform 0.5s ease;
-}
-.about__group-photo:hover img { transform: scale(1.04); }
-.about__caption {
-  font-family: var(--font-title);
-  font-size: 1rem;
-  color: var(--color-gold);
-  letter-spacing: 0.12em;
-  text-align: center;
-}
-
-/* ── 9. CLASSES ── */
-.classes__grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: var(--space-md);
-}
-.class__card {
-  background: var(--color-bg-card);
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-lg);
-  padding: var(--space-md) var(--space-sm);
-  text-align: center;
-  transition: transform var(--transition),
-              border-color var(--transition),
-              box-shadow var(--transition);
-}
-.class__card:hover {
-  transform: translateY(-5px);
-  border-color: var(--color-gold);
-  box-shadow: 0 10px 30px rgba(201,146,42,0.12);
-}
-.class__card--featured {
-  border-color: var(--color-gold);
-  background: linear-gradient(140deg, var(--color-bg-card), rgba(201,146,42,0.07));
-}
-.class__icon {
-  font-size: 2rem;
-  margin-bottom: var(--space-sm);
-  display: block;
-}
-.class__card h3  { color: var(--color-white); margin-bottom: 6px; }
-.class__card p   { font-size: 0.92rem; }
-
-/* ── 10. SCHEDULE ── */
-.schedule__wrapper {
-  max-width: 650px;
-  margin: 0 auto;
-  text-align: center;
-}
-.schedule__card {
-  background: var(--color-bg-card);
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-lg);
-  padding: var(--space-md);
-  margin-bottom: var(--space-md);
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-.schedule__day {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0.75rem var(--space-md);
-  background: rgba(201,146,42,0.04);
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-md);
-}
-.schedule__label { font-weight: 700; color: var(--color-white); font-size: 0.95rem; }
-.schedule__time  { font-family: var(--font-title); font-size: 1.2rem; color: var(--color-gold); }
-.schedule__time--closed { color: var(--color-grey); font-size: 0.9rem; font-family: var(--font-body); font-weight: 600; }
-
-.schedule__note {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: var(--space-sm);
-  margin-top: var(--space-sm);
-}
-.schedule__note p { font-size: 0.95rem; margin: 0; }
-
-/* ── 11. FIGHTERS ── */
-.fighters__grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: var(--space-md);
-}
-.fighter__card {
-  background: var(--color-bg-card);
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-lg);
-  overflow: hidden;
-  transition: transform var(--transition), border-color var(--transition), box-shadow var(--transition);
-}
-.fighter__card:hover {
-  transform: translateY(-5px);
-  border-color: var(--color-gold);
-  box-shadow: 0 10px 30px rgba(201,146,42,0.12);
-}
-
-/* Image fighter — hauteur fixe, pas trop grande */
-.fighter__img-wrapper {
-  position: relative;
-  height: 280px;
-  overflow: hidden;
-  background: #111;
-}
-.fighter__img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: top;
-  transition: transform 0.5s ease;
-}
-.fighter__card:hover .fighter__img { transform: scale(1.04); }
-
-.fighter__overlay {
-  position: absolute;
-  bottom: 0; left: 0; right: 0;
-  padding: 0.5rem;
-  background: linear-gradient(transparent, rgba(0,0,0,0.8));
-  text-align: center;
-}
-.fighter__record {
-  font-family: var(--font-title);
-  font-size: 1rem;
-  color: var(--color-gold);
-  letter-spacing: 0.1em;
-}
-.fighter__info { padding: var(--space-sm) var(--space-md) var(--space-md); }
-.fighter__info h3 { color: var(--color-white); margin-bottom: 2px; font-size: 1.15rem; }
-.fighter__nickname {
-  font-family: var(--font-title);
-  font-size: 1.3rem;
-  color: var(--color-gold);
-  letter-spacing: 0.08em;
-  margin-bottom: 4px;
-  display: block;
-}
-.fighter__division { font-size: var(--fs-small); color: var(--color-grey); margin-bottom: var(--space-sm); display: block; }
-
-.fighter__event {
-  background: rgba(0,0,0,0.25);
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-md);
-  padding: 0.75rem var(--space-sm);
-  margin-bottom: var(--space-sm);
-}
-.fighter__event-row {
-  display: flex;
-  justify-content: space-between;
-  font-size: 0.82rem;
-  margin-bottom: 4px;
-}
-.fighter__event-row:last-child { margin-bottom: 0; }
-.fighter__event-label { color: var(--color-gold); font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; }
-.fighter__event-val   { color: var(--color-white); text-align: right; }
-
-.fighter__tags { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: var(--space-sm); }
-
-/* Featured fighter */
-.fighter__card--featured {
-  border-color: var(--color-gold);
-  background: linear-gradient(160deg, var(--color-bg-card), rgba(201,146,42,0.08));
-}
-.fighter__card-badge {
-  position: absolute;
-  top: 0; left: 50%;
-  transform: translateX(-50%);
-  background: var(--color-gold);
-  color: var(--color-bg);
-  font-size: 0.68rem;
-  font-weight: 800;
-  letter-spacing: 0.1em;
-  padding: 4px 14px;
-  border-radius: 0 0 var(--radius-md) var(--radius-md);
-  white-space: nowrap;
-  z-index: 2;
-}
-
-/* Placeholder / Join cards */
-.fighter__card--soon,
-.fighter__card--join {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 300px;
-}
-.fighter__card--soon {
-  background: rgba(255,255,255,0.01);
-  border: 2px dashed var(--color-border);
-  opacity: 0.6;
-  transition: opacity var(--transition), border-color var(--transition);
-}
-.fighter__card--soon:hover { opacity: 1; border-color: var(--color-gold); }
-.fighter__card--join {
-  background: rgba(201,146,42,0.04);
-  border: 2px dashed var(--color-gold);
-}
-
-.fighter__soon-content,
-.fighter__join-content {
-  text-align: center;
-  padding: var(--space-md);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: var(--space-sm);
-}
-.fighter__soon-icon { font-size: 2rem; filter: grayscale(1); }
-.fighter__join-icon { font-size: 2.5rem; }
-.fighter__soon-content h3 { color: var(--color-grey); font-size: 1rem; }
-.fighter__join-content h3 { color: var(--color-gold); }
-.fighter__soon-content p,
-.fighter__join-content p  { font-size: var(--fs-small); margin: 0; }
-
-/* Galerie 4 photos fighter */
-.fighter__card--gallery {
-  padding: var(--space-sm);
-}
-.fighter__gallery-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 6px;
-}
-.fighter__gallery-item {
-  position: relative;
-  border-radius: var(--radius-md);
-  overflow: hidden;
-  aspect-ratio: 3/4;
-  cursor: pointer;
-}
-.fighter__gallery-item img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: transform 0.5s ease;
-}
-.fighter__gallery-item:hover img { transform: scale(1.06); }
-
-.fighter__gallery-caption {
-  position: absolute;
-  bottom: 0; left: 0; right: 0;
-  background: linear-gradient(transparent, rgba(0,0,0,0.8));
-  color: var(--color-white);
-  font-size: 0.72rem;
-  font-weight: 700;
-  padding: 6px 6px 4px;
-  text-align: center;
-  text-transform: uppercase;
-  letter-spacing: 0.06em;
-  transform: translateY(100%);
-  transition: transform var(--transition);
-}
-.fighter__gallery-item:hover .fighter__gallery-caption { transform: translateY(0); }
-.fighter__gallery-item--win .fighter__gallery-caption  { color: var(--color-gold); }
-
-/* ── 12. GALLERY ── */
-.gallery__grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-auto-rows: 180px;
-  gap: 8px;
-  margin-bottom: var(--space-md);
-}
-.gallery__item {
-  position: relative;
-  overflow: hidden;
-  border-radius: var(--radius-md);
-  cursor: pointer;
-  background: var(--color-bg-card);
-}
-.gallery__item--large {
-  grid-column: span 2;
-  grid-row: span 2;
-}
-.gallery__item img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: transform 0.5s ease;
-}
-.gallery__item:hover img { transform: scale(1.07); }
-
-.gallery__caption {
-  position: absolute;
-  bottom: 0; left: 0; right: 0;
-  padding: 0.5rem 0.75rem;
-  background: linear-gradient(transparent, rgba(0,0,0,0.75));
-  color: var(--color-white);
-  font-size: 0.75rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  transform: translateY(100%);
-  transition: transform var(--transition);
-}
-.gallery__item:hover .gallery__caption { transform: translateY(0); }
-.gallery__cta { text-align: center; }
-
-/* Lightbox */
-.lightbox {
-  position: fixed;
-  inset: 0;
-  background: rgba(0,0,0,0.93);
-  z-index: 9999;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity var(--transition);
-}
-.lightbox.active { opacity: 1; pointer-events: all; }
-
-.lightbox__img {
-  max-width: 88vw;
-  max-height: 82vh;
-  object-fit: contain;
-  border-radius: var(--radius-md);
-  border: 2px solid var(--color-gold);
-}
-.lightbox__close {
-  position: absolute;
-  top: 1.2rem; right: 1.5rem;
-  background: none; border: none;
-  color: var(--color-white);
-  font-size: 1.8rem;
-  cursor: pointer;
-  line-height: 1;
-  transition: color var(--transition);
-}
-.lightbox__close:hover { color: var(--color-gold); }
-
-.lightbox__nav {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background: rgba(201,146,42,0.15);
-  border: 1px solid var(--color-gold);
-  color: var(--color-gold);
-  font-size: 2.2rem;
-  line-height: 1;
-  padding: 0.4rem 0.9rem;
-  cursor: pointer;
-  border-radius: var(--radius-md);
-  transition: background var(--transition);
-}
-.lightbox__nav:hover     { background: rgba(201,146,42,0.35); }
-.lightbox__nav--prev     { left: 1rem; }
-.lightbox__nav--next     { right: 1rem; }
-
-/* ── 13. HISTORY (SEO) ── */
-.history__grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: var(--space-md);
-}
-.history__card {
-  background: var(--color-bg-card);
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-lg);
-  padding: var(--space-md);
-  transition: border-color var(--transition);
-}
-.history__card:hover { border-color: var(--color-gold); }
-.history__icon { font-size: 1.8rem; margin-bottom: var(--space-sm); display: block; }
-.history__card h3 { color: var(--color-gold); font-size: 1.15rem; margin-bottom: 0.5rem; }
-.history__card p  { font-size: 0.92rem; line-height: 1.8; margin: 0; }
-
-/* ── 14. PRICING ── */
-.pricing__cta-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: var(--space-md);
-  max-width: 780px;
-  margin: 0 auto var(--space-md);
-}
-.pricing__cta-card {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  gap: var(--space-sm);
-  padding: var(--space-lg) var(--space-md);
-  background: var(--color-bg-card);
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-lg);
-  transition: transform var(--transition), border-color var(--transition), box-shadow var(--transition);
-  cursor: pointer;
-}
-.pricing__cta-card:hover {
-  transform: translateY(-4px);
-  border-color: var(--color-gold);
-  box-shadow: 0 10px 30px rgba(0,0,0,0.35);
-}
-.pricing__cta-card--gold {
-  border-color: var(--color-gold);
-  background: linear-gradient(135deg, var(--color-bg-card), rgba(201,146,42,0.07));
-}
-.pricing__cta-icon    { font-size: 2.2rem; }
-.pricing__cta-card h3 { color: var(--color-white); font-size: 1.2rem; }
-.pricing__cta-card p  { font-size: var(--fs-small); margin: 0; }
-
-.pricing__walkin {
-  text-align: center;
-  padding: var(--space-md);
-  background: rgba(201,146,42,0.07);
-  border: 1px solid rgba(201,146,42,0.4);
-  border-radius: var(--radius-md);
-  max-width: 480px;
-  margin: 0 auto;
-}
-.pricing__walkin p { color: var(--color-white); font-size: 1.05rem; margin: 0; }
-
-/* ── 15. CONTACT ── */
-.contact__grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: var(--space-xl);
-  align-items: start;
-}
-.contact__info {
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-sm);
-}
-.contact__item {
-  display: flex;
-  gap: var(--space-sm);
-  align-items: flex-start;
-  padding: var(--space-sm);
-  background: var(--color-bg-card);
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-md);
-  transition: border-color var(--transition);
-}
-.contact__item:hover { border-color: var(--color-gold); }
-.contact__icon { font-size: 1.3rem; flex-shrink: 0; margin-top: 2px; }
-.contact__item strong {
-  display: block;
-  font-size: 0.72rem;
-  text-transform: uppercase;
-  letter-spacing: 0.12em;
-  color: var(--color-gold);
-  margin-bottom: 3px;
-}
-.contact__item p { margin: 0; color: var(--color-grey); font-size: 0.95rem; }
-
-.contact__map {
-  border-radius: var(--radius-lg);
-  overflow: hidden;
-  border: 1px solid var(--color-border);
-}
-
-/* ── 16. FOOTER ── */
-.footer {
-  background: #080808;
-  padding: var(--space-lg) 0;
-  border-top: 1px solid var(--color-border);
-}
-.footer__inner {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: var(--space-md);
-  text-align: center;
-}
-.footer__logo {
-  height: 70px;
-  width: auto;
-  opacity: 0.85;
-  border-radius: 50%;
-  transition: opacity var(--transition);
-}
-.footer__logo:hover { opacity: 1; }
-
-.footer__links {
-  display: flex;
-  gap: var(--space-md);
-  flex-wrap: wrap;
-  justify-content: center;
-}
-.footer__links a {
-  color: var(--color-grey);
-  font-weight: 600;
-  font-size: 0.78rem;
-  text-transform: uppercase;
-  letter-spacing: 0.12em;
-  transition: color var(--transition);
-}
-.footer__links a:hover { color: var(--color-gold); }
-
-.footer__copy {
-  font-size: var(--fs-small);
-  color: var(--color-grey);
-  line-height: 1.9;
-  margin: 0;
-}
-.footer__copy em {
-  color: var(--color-gold);
-  font-style: italic;
-  font-size: 0.8rem;
-  letter-spacing: 0.12em;
-}
-
-/* ── 17. RESPONSIVE ── */
-@media (max-width: 900px) {
-  .about__grid        { grid-template-columns: 1fr; }
-  .about__photo-col   { order: -1; }
-  .about__group-photo { aspect-ratio: 16/9; }
-  .about__values      { grid-template-columns: repeat(2, 1fr); }
-
-  .contact__grid      { grid-template-columns: 1fr; }
-  .pricing__cta-grid  { grid-template-columns: 1fr; }
-
-  .gallery__grid      { grid-template-columns: repeat(3, 1fr); grid-auto-rows: 160px; }
-  .gallery__item--large { grid-column: span 2; }
-
-  .fighters__grid     { grid-template-columns: repeat(2, 1fr); }
-  .fighter__card--gallery { display: none; }
-}
-
-@media (max-width: 600px) {
-  :root {
-    --space-xl: 3.5rem;
-    --space-lg: 2.5rem;
-    --space-md: 1.5rem;
-  }
-
-  /* Navbar */
-  .navbar { background: rgba(13,13,13,0.96); }
-  .navbar__menu {
-    display: none;
-    flex-direction: column;
-    position: absolute;
-    top: 100%; left: 0; right: 0;
-    background: rgba(13,13,13,0.98);
-    padding: var(--space-md);
-    gap: var(--space-sm);
-    border-top: 1px solid var(--color-border);
-  }
-  .navbar__menu.open { display: flex; }
-  .navbar__burger    { display: flex; }
-
-  /* Hero */
-  .hero__cta          { flex-direction: column; align-items: center; }
-  .hero__cta .btn     { width: 100%; max-width: 280px; }
-
-  /* About */
-  .about__values      { grid-template-columns: repeat(2, 1fr); }
-
-  /* Classes */
-  .classes__grid      { grid-template-columns: 1fr; }
-
-  /* Schedule */
-  .schedule__day      { flex-direction: column; text-align: center; gap: 4px; }
-
-  /* Fighters */
-  .fighters__grid     { grid-template-columns: 1fr; }
-
-  /* Gallery */
-  .gallery__grid      {
-    grid-template-columns: repeat(2, 1fr);
-    grid-auto-rows: 140px;
-  }
-  .gallery__item--large { grid-column: span 2; grid-row: span 1; }
-
-  /* Lightbox */
-  .lightbox__nav      { font-size: 1.8rem; padding: 0.3rem 0.6rem; }
-
-  /* Footer */
-  .footer__links      { gap: var(--space-sm); }
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Brother Kick Muay Thai Gym - Shah Alam, Malaysia. Train with experienced coaches in Muay Thai, fitness & conditioning. Join our brotherhood today!">
+    <meta name="keywords" content="Muay Thai, gym, Shah Alam, Malaysia, martial arts, fighting, fitness, training">
+    <meta name="author" content="Brother Kick Muay Thai">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Brother Kick Muay Thai - Shah Alam, Malaysia">
+    <meta property="og:description" content="Train Hard. Fight Smart. Build Brotherhood. Experience Muay Thai training in the heart of Shah Alam.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.instagram.com/brotherkickmuaythaigym">
+    
+    <title>Brother Kick Muay Thai | Shah Alam, Malaysia</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>👊</text></svg>">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Kanit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- =============================================
+         NAVIGATION
+         ============================================= -->
+    <nav class="nav nav--transparent" id="nav">
+        <div class="container nav__container">
+            <a href="#" class="nav__logo">
+                BROTHER <span>KICK</span>
+            </a>
+            
+            <ul class="nav__links">
+                <li><a href="#hero" class="nav__link active">Home</a></li>
+                <li><a href="#about" class="nav__link">About</a></li>
+                <li><a href="#training" class="nav__link">Training</a></li>
+                <li><a href="#gallery" class="nav__link">Gallery</a></li>
+                <li><a href="#contact" class="nav__link">Contact</a></li>
+            </ul>
+            
+            <button class="nav__hamburger" aria-label="Toggle menu" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div class="nav__mobile">
+            <ul class="nav__mobile-links">
+                <li><a href="#hero" class="nav__mobile-link active">Home</a></li>
+                <li><a href="#about" class="nav__mobile-link">About</a></li>
+                <li><a href="#training" class="nav__mobile-link">Training</a></li>
+                <li><a href="#gallery" class="nav__mobile-link">Gallery</a></li>
+                <li><a href="#contact" class="nav__mobile-link">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <!-- =============================================
+             HERO SECTION
+             ============================================= -->
+        <section class="hero" id="hero">
+            <div class="hero__bg"></div>
+            <div class="hero__overlay"></div>
+            
+            <div class="hero__content">
+                <h1 class="hero__title">
+                    BROTHER<br>
+                    <span>KICK</span>
+                </h1>
+                <p class="hero__subtitle">Muay Thai Gym — Shah Alam, Malaysia</p>
+                <p class="hero__tagline">"Train Hard. Fight Smart. Build Brotherhood."</p>
+                
+                <div class="hero__ctas">
+                    <a href="#contact" class="btn btn--primary btn--large">
+                        🥊 Join Us on WhatsApp
+                    </a>
+                    <a href="https://www.instagram.com/brotherkickmuaythaigym?igsh=ZWNqZjAydzl6ajNi" 
+                       target="_blank" 
+                       rel="noopener noreferrer" 
+                       class="btn btn--outline btn--large">
+                        📸 Follow on Instagram
+                    </a>
+                </div>
+            </div>
+            
+            <div class="hero__scroll">
+                <div class="hero__scroll-icon"></div>
+            </div>
+        </section>
+
+        <!-- =============================================
+             PHILOSOPHY BANNER
+             ============================================= -->
+        <section class="philosophy" aria-label="Our Philosophy">
+            <div class="container">
+                <p class="philosophy__text">
+                    <span class="philosophy__word">DISCIPLINE.</span>
+                    <span class="philosophy__word">RESPECT.</span>
+                    <span class="philosophy__word">BROTHERHOOD.</span>
+                </p>
+            </div>
+        </section>
+
+        <!-- =============================================
+             ABOUT SECTION
+             ============================================= -->
+        <section class="section about" id="about">
+            <div class="container">
+                <div class="about__grid">
+                    <div class="about__content animate-on-scroll">
+                        <span class="about__label">About Us</span>
+                        <h2 class="about__title">Welcome to<br>Brother Kick</h2>
+                        <div class="divider"></div>
+                        <p class="about__text">
+                            Located in the heart of Shah Alam, Brother Kick Muay Thai is more than just a gym — it's a community. Whether you're a complete beginner or a seasoned fighter, you'll find a home here.
+                        </p>
+                        <p class="about__text">
+                            Our experienced coaches are dedicated to developing not just your technique, but your character. Step in, gloves on, and become part of the family.
+                        </p>
+                    </div>
+                    <div class="about__image animate-on-scroll delay-1">
+                        <img src="https://images.unsplash.com/photo-1616680214084-22670de1af12?w=800" 
+                             alt="Muay Thai training at Brother Kick gym"
+                             loading="lazy">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- =============================================
+             WHAT WE OFFER SECTION
+             ============================================= -->
+        <section class="section offer" id="training">
+            <div class="container">
+                <h2 class="section-title animate-on-scroll">What We Offer</h2>
+                
+                <div class="offer__grid">
+                    <article class="card card__accent animate-on-scroll delay-1">
+                        <div class="card__icon">🥊</div>
+                        <h3 class="card__title">Group Classes</h3>
+                        <p class="card__text">
+                            Daily classes for all levels. Kids, beginners, and advanced fighters all welcome. Check our Instagram for the latest schedule.
+                        </p>
+                        <a href="https://www.instagram.com/brotherkickmuaythaigym" 
+                           target="_blank" 
+                           rel="noopener noreferrer" 
+                           class="card__link">
+                            Learn More →
+                        </a>
+                    </article>
+                    
+                    <article class="card card__accent animate-on-scroll delay-2">
+                        <div class="card__icon">🎯</div>
+                        <h3 class="card__title">Private Training</h3>
+                        <p class="card__text">
+                            One-on-one sessions with experienced coaches. Sharpen your technique and accelerate your progress.
+                        </p>
+                        <a href="https://www.instagram.com/brotherkickmuaythaigym" 
+                           target="_blank" 
+                           rel="noopener noreferrer" 
+                           class="card__link">
+                            Learn More →
+                        </a>
+                    </article>
+                    
+                    <article class="card card__accent animate-on-scroll delay-3">
+                        <div class="card__icon">💪</div>
+                        <h3 class="card__title">Fitness & Conditioning</h3>
+                        <p class="card__text">
+                            Build strength, endurance, and mental toughness through our Muay Thai conditioning programs.
+                        </p>
+                        <a href="https://www.instagram.com/brotherkickmuaythaigym" 
+                           target="_blank" 
+                           rel="noopener noreferrer" 
+                           class="card__link">
+                            Learn More →
+                        </a>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- =============================================
+             SCHEDULE & PRICING SECTION
+             ============================================= -->
+        <section class="section pricing" id="pricing">
+            <div class="container">
+                <h2 class="pricing__title animate-on-scroll">Pricing & Schedules</h2>
+                <p class="pricing__text animate-on-scroll delay-1">
+                    Our pricing and class schedules are updated regularly. For the latest information, connect with us directly:
+                </p>
+                
+                <div class="pricing__buttons animate-on-scroll delay-2">
+                    <a href="https://www.instagram.com/brotherkickmuaythaigym" 
+                       target="_blank" 
+                       rel="noopener noreferrer" 
+                       class="btn btn--primary btn--large">
+                        📸 View on Instagram
+                    </a>
+                    <a href="#contact" 
+                       class="btn btn--outline btn--large">
+                        💬 Join WhatsApp Group
+                    </a>
+                </div>
+                
+                <p class="pricing__note animate-on-scroll delay-3">
+                    * Pricing subject to change. Always check our social media for current rates.
+                </p>
+            </div>
+        </section>
+
+        <!-- =============================================
+             GALLERY SECTION
+             ============================================= -->
+        <section class="section gallery" id="gallery">
+            <div class="container">
+                <h2 class="section-title animate-on-scroll">Inside The Gym</h2>
+                
+                <div class="gallery__grid">
+                    <div class="gallery__item animate-on-scroll delay-1">
+                        <img src="https://images.unsplash.com/photo-1590556409324-aa1d726e5c3c?w=600" 
+                             alt="Muay Thai training session"
+                             loading="lazy">
+                        <div class="gallery__overlay">
+                            <span class="gallery__overlay-text">BROTHER KICK</span>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery__item animate-on-scroll delay-1">
+                        <img src="https://images.unsplash.com/photo-1538805060514-97d9cc172b5b?w=600" 
+                             alt="Boxing gloves and equipment"
+                             loading="lazy">
+                        <div class="gallery__overlay">
+                            <span class="gallery__overlay-text">BROTHER KICK</span>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery__item animate-on-scroll delay-2">
+                        <img src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=600" 
+                             alt="Martial arts training"
+                             loading="lazy">
+                        <div class="gallery__overlay">
+                            <span class="gallery__overlay-text">BROTHER KICK</span>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery__item animate-on-scroll delay-2">
+                        <img src="https://images.unsplash.com/photo-1517438476312-10d79c077509?w=600" 
+                             alt="Gym training area"
+                             loading="lazy">
+                        <div class="gallery__overlay">
+                            <span class="gallery__overlay-text">BROTHER KICK</span>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery__item animate-on-scroll delay-3">
+                        <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600" 
+                             alt="Kickboxing training"
+                             loading="lazy">
+                        <div class="gallery__overlay">
+                            <span class="gallery__overlay-text">BROTHER KICK</span>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery__item animate-on-scroll delay-3">
+                        <img src="https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=600" 
+                             alt="Training session"
+                             loading="lazy">
+                        <div class="gallery__overlay">
+                            <span class="gallery__overlay-text">BROTHER KICK</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- =============================================
+             CONTACT SECTION
+             ============================================= -->
+        <section class="section contact" id="contact">
+            <div class="container">
+                <div class="contact__grid">
+                    <div class="contact__info animate-on-scroll">
+                        <h2 class="contact__title">Find Us</h2>
+                        
+                        <div class="contact__item">
+                            <span class="contact__item-icon">📍</span>
+                            <div class="contact__item-content">
+                                <p class="contact__item-label">Address</p>
+                                <p class="contact__item-value">
+                                    No 37-1, Jalan Bulan BR U5/BR,<br>
+                                    Seksyen U5, Bandar Pinggiran Subang,<br>
+                                    Shah Alam, Malaysia
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact__item">
+                            <span class="contact__item-icon">✉️</span>
+                            <div class="contact__item-content">
+                                <p class="contact__item-label">Email</p>
+                                <p class="contact__item-value">
+                                    <a href="/cdn-cgi/l/email-protection#9cfeeef3e8f4f9eef7f5fff7eff5f2fbfdf4f5e8fdf1dcfbf1fdf5f0b2fff3f1">
+                                        <span class="__cf_email__" data-cfemail="2042524f544845524b49434b53494e4741484954414d60474d41494c0e434f4d">[email&#160;protected]</span>
+                                    </a>
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact__item">
+                            <span class="contact__item-icon">📸</span>
+                            <div class="contact__item-content">
+                                <p class="contact__item-label">Instagram</p>
+                                <p class="contact__item-value">
+                                    <a href="https://www.instagram.com/brotherkickmuaythaigym" 
+                                       target="_blank" 
+                                       rel="noopener noreferrer">
+                                        @brotherkickmuaythaigym
+                                    </a>
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact__social">
+                            <a href="https://www.instagram.com/brotherkickmuaythaigym" 
+                               target="_blank" 
+                               rel="noopener noreferrer" 
+                               class="contact__social-link"
+                               aria-label="Follow us on Instagram">
+                                📸
+                            </a>
+                        </div>
+                        
+                        <div class="contact__note">
+                            <strong>Note:</strong> For pricing, schedules & membership info — reach us on Instagram or WhatsApp.
+                        </div>
+                    </div>
+                    
+                    <div class="contact__map animate-on-scroll delay-1">
+                        <iframe 
+                            src="https://maps.google.com/maps?q=Shah+Alam+Malaysia&output=embed" 
+                            width="100%" 
+                            height="100%" 
+                            style="border:0;" 
+                            allowfullscreen="" 
+                            loading="lazy" 
+                            referrerpolicy="no-referrer-when-downgrade"
+                            title="Brother Kick Muay Thai location on Google Maps">
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- =============================================
+         FOOTER
+         ============================================= -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__content">
+                <div class="footer__logo-col">
+                    <h3 class="footer__logo">
+                        BROTHER <span>KICK</span> MUAY THAI
+                    </h3>
+                    <p class="footer__tagline">"Train Hard. Fight Smart. Build Brotherhood."</p>
+                </div>
+                
+                <div class="footer__nav">
+                    <h4 class="footer__title">Quick Links</h4>
+                    <ul class="footer__links">
+                        <li><a href="#hero" class="footer__link">Home</a></li>
+                        <li><a href="#about" class="footer__link">About</a></li>
+                        <li><a href="#training" class="footer__link">Training</a></li>
+                        <li><a href="#contact" class="footer__link">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer__contact">
+                    <h4 class="footer__title">Get In Touch</h4>
+                    <a href="/cdn-cgi/l/email-protection#b1d3c3dec5d9d4c3dad8d2dac2d8dfd6d0d9d8c5d0dcf1d6dcd0d8dd9fd2dedc" class="footer__contact-item">
+                        ✉️ <span class="__cf_email__" data-cfemail="a5c7d7cad1cdc0d7ceccc6ced6cccbc2c4cdccd1c4c8e5c2c8c4ccc98bc6cac8">[email&#160;protected]</span>
+                    </a>
+                    <a href="https://www.instagram.com/brotherkickmuaythaigym" 
+                       target="_blank" 
+                       rel="noopener noreferrer" 
+                       class="footer__contact-item">
+                        📸 @brotherkickmuaythaigym
+                    </a>
+                </div>
+            </div>
+            
+            <div class="footer__bottom">
+                <p class="footer__copyright">
+                    © 2026 Brother Kick Muay Thai. All rights reserved.
+                </p>
+                <div class="footer__social">
+                    <a href="https://www.instagram.com/brotherkickmuaythaigym" 
+                       target="_blank" 
+                       rel="noopener noreferrer" 
+                       class="footer__social-link"
+                       aria-label="Follow us on Instagram">
+                        📸
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="main.js"></script>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/v833ccba57c9e4d2798f2e76cebdd09a11778172276447" integrity="sha512-57MDmcccJXYtNnH+ZiBwzC4jb2rvgVCEokYN+L/nLlmO8rfYT/gIpW2A569iJ/3b+0UEasghjuZH/ma3wIs/EQ==" data-cf-beacon='{"version":"2024.11.0","token":"8607d2a720d14b038279025b2b5a82e5","server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
+</body>
+</html>
